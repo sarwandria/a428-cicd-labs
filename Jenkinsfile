@@ -10,9 +10,9 @@ pipeline {
     }
     stages {
         stage('Build') {
-            script {
-                if (${CI}=='true'){
-                    steps {
+            steps {
+                script {
+                    if (${CI}=='true'){
                         sh 'npm install'
                     }
                 }
