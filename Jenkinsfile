@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    if (${CI}=='true'){
+                    if (env.BRANCH_NAME == 'master'){
                         sh 'npm install'
                     }
                 }
